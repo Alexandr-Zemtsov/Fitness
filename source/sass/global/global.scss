@@ -1,0 +1,51 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  font-family: $font-family;
+  font-style: normal;
+  font-weight: 400;
+  min-width: $mobile-width;
+  background-color: $color-white;
+  font-size: 14px;
+  color: $color-text;
+  display: flex;
+  flex-direction: column;
+}
+
+.page-body {
+  min-height: 100%;
+}
+
+.main-page {
+  flex-grow: 1;
+}
+
+
+.link {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.list {
+  list-style-type: none;
+}
+
+.button {
+  border: none;
+  cursor: pointer;
+}

@@ -1,0 +1,44 @@
+.feedback {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    border-top: 1px solid $divider;
+  }
+}
+
+.feedback__form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 70px 15px;
+  background-color: $color-text;
+
+  @media (min-width: $tablet-width) {
+    padding: 60px 45px;
+  }
+
+  @media (min-width: $desktop-width) {
+    align-items: end;
+    padding: 60px 103px;
+  }
+}
+
+.feedback__block-contacts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 37px 15px;
+
+  @media (min-width: $tablet-width) {
+    padding: 60px 45px 59px;
+  }
+
+  @media (min-width: $desktop-width) {
+    align-items: start;
+    padding: 60px 103px 59px;
+  }
+}

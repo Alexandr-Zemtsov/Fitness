@@ -1,0 +1,138 @@
+.price {
+  padding: 41px 0 40px;
+  background-color: $white-bg;
+
+  @media (min-width: $tablet-width) {
+    padding: 61px 0 60px;
+    background-image: url("../../img/pictures/price/disk-tablet.webp");
+    background-repeat: no-repeat;
+    background-position: calc(50% + 249px) 102.68%;
+    background-size: 379px 422px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 100px 0;
+    background-position: calc(50% + 601px) 115.8%;
+    background-size: 447px 492px;
+  }
+}
+
+.price__title {
+  margin-bottom: 31px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 36px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 20px;
+  }
+}
+
+.price__tabs-nav {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 2px solid rgba(120, 120, 120, 0.2);
+  padding-bottom: 6px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  max-width: 310px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 45px;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 350px;
+    margin-bottom: 40px;
+    padding-bottom: 8px;
+  }
+}
+
+.price__button-nav {
+  position: relative;
+  font-family: $font-family;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1;
+  color: $light;
+  background-color: transparent;
+
+  &:hover {
+    color: rgba(16, 38, 84, 0.7);
+  }
+
+  &:focus-visible {
+    color: $color-text;
+    outline: none;
+  }
+
+  &:disabled {
+    opacity: 0.3;
+    color: $color-text;
+  }
+
+  @media (min-width: $tablet-width) {
+    font-size: 18px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 20px;
+  }
+}
+
+.price__button-nav::before {
+  content: "";
+  width: 100%;
+  height: 2px;
+  position: absolute;
+  z-index: 2;
+  bottom: -8px;
+  background-color: transparent;
+  left: 0;
+
+  @media (min-width: $desktop-width) {
+    width: 101%;
+    bottom: -10px;
+  }
+}
+
+.price__button-nav:hover::before {
+  background-color: #787878;
+}
+
+.price__button-nav:focus-visible::before {
+  background-color: $color-text;
+}
+
+.price__button-nav:active::before {
+  background-color: $color-red;
+}
+
+.price__button-nav:disabled::before {
+  opacity: 0.3;
+  background-color: $color-text;
+}
+
+.price__button-nav--active {
+  color: $color-text;
+}
+
+.price__button-nav--active::before,
+.price__button-nav--active:hover::before,
+.price__button-nav--active:focus-visible::before {
+  background-color: $tabs-active;
+}
+
+.price__list {
+  display: flex;
+}
+
+.price__item {
+  display: none;
+}
+
+.price__item--active {
+  display: block;
+  width: 100%;
+}
