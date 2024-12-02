@@ -1,0 +1,200 @@
+.accordeon-faq {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 20px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: -1px;
+  }
+}
+
+.accordeon-faq__item {
+  padding: 20px 0;
+  border-bottom: 1px solid $divider;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease-out;
+
+  @media (min-width: $tablet-width) {
+    padding: 24px 0 22px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 23px 0 22px;
+  }
+}
+
+.accordeon-faq__item:first-child {
+  padding-top: 20px;
+  border-top: 1px solid $divider;
+
+  @media (min-width: $tablet-width) {
+    padding: 24px 0 23px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 23px 0 22px;
+  }
+}
+
+.accordeon-faq__block-title {
+  display: flex;
+  justify-content: space-between;
+  hyphens: none;
+  align-items: center;
+}
+
+.accordeon-faq__block-title h3 {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1;
+  hyphens: none;
+  width: 83%;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+
+  @media (min-width: $tablet-width) {
+    font-size: 22px;
+    width: 500px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 24px;
+    width: 660px;
+  }
+}
+
+.accordeon-faq__button {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid $btn-border;
+  background-color: transparent;
+  display: inline-block;
+  transition: all 0.3s ease-out;
+
+
+  &:hover {
+    background-color: $btn-border;
+  }
+
+  &:hover::before,
+  &:hover::after,
+  &:focus-visible::before,
+  &:focus-visible::after {
+    background-color: $color-white;
+  }
+
+  &:focus-visible {
+    background-color: $divider;
+    outline: none;
+  }
+
+  &:disabled {
+    opacity: 0.3;
+    background-color: transparent;
+  }
+
+  &:disabled::before,
+  &:disabled::after {
+    background-color: $divider;
+  }
+
+  @media (min-width: $tablet-width) {
+    top: -1px;
+    width: 40px;
+    height: 40px;
+  }
+
+  @media (min-width: $desktop-width) {
+    top: 0;
+  }
+}
+
+.accordeon-faq__button--open {
+  background-color: $btn-border;
+}
+
+.accordeon-faq__button::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 1px;
+  width: 14px;
+  background-color: #1c3374;
+
+  @media (min-width: $tablet-width) {
+    width: 20px;
+  }
+}
+
+.accordeon-faq__button::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(90deg);
+  height: 1px;
+  width: 14px;
+  background-color: #1c3374;
+  transition: all 0.3s ease-out;
+
+  @media (min-width: $tablet-width) {
+    width: 20px;
+  }
+}
+
+.accordeon-faq__button--open::after {
+  background-color: $color-white;
+}
+
+.accordeon-faq__button--open::before {
+  background-color: $color-white;
+  transform: translate(-50%, -50%) rotate(0deg);
+}
+
+.accordeon-faq__block-body p {
+  @media (min-width: $tablet-width) {
+    width: 560px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 645px;
+  }
+}
+
+.accordeon-faq__block-body {
+  max-height: 0;
+  overflow: hidden;
+  will-change: max-height;
+  transition: all 0.3s ease-out;
+  width: 90%;
+}
+
+.accordeon-faq__item--active .accordeon-faq__block-body {
+  max-height: 100%;
+  padding-top: 20px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 9px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 23px;
+  }
+}

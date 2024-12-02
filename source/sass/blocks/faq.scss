@@ -1,0 +1,141 @@
+.faq {
+  padding: 71px 0 70px;
+  background-color: $primary-bg;
+
+  @media (min-width: $tablet-width) {
+    padding: 61px 0 60px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 100px 0;
+  }
+}
+
+.faq__title {
+  margin-bottom: 34px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 44px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 50px;
+    text-align: left;
+  }
+}
+
+.faq__wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+  max-width: 678px;
+  margin: 0 auto;
+
+  @media (min-width: $tablet-width) {
+    gap: 45px;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 1160px;
+    flex-direction: row;
+    gap: 40px;
+  }
+}
+
+.faq__tabs-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+
+  @media (min-width: $tablet-width) {
+    justify-content: space-between;
+  }
+
+  @media (min-width: $desktop-width) {
+    flex-direction: column;
+    justify-content: start;
+    flex-basis: 260px;
+  }
+}
+
+.faq__button-tabs {
+  border: 1px solid $tab-border;
+  padding: 14px 22px;
+  width: 140px;
+  height: 46px;
+  background-color: transparent;
+  font-family: $font-family;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1;
+  text-align: center;
+  color: $color-text;
+
+  &:hover,
+  &:focus-visible {
+    border-color: $color-text;
+  }
+
+  &:focus-visible {
+    background-color: $color-white;
+    outline: none;
+  }
+
+  &:active {
+    background: linear-gradient(104deg, #ed0233 17%, #003eb7 96%);
+    color: $color-white;
+    border: none;
+  }
+
+  &:disabled,
+  &:disabled:active {
+    border: 1px solid $tab-border;
+    color: $tab-border;
+    background: transparent;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding: 17px 28px;
+    width: 162px;
+    height: 54px;
+    font-size: 18px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 100%;
+    padding: 19px 28px;
+  }
+}
+
+.faq__button-tabs--active {
+  background: linear-gradient(104deg, #ed0233 17%, #003eb7 96%);
+  color: $color-white;
+  border: none;
+  padding: 15px 23px;
+
+  @media (min-width: $tablet-width) {
+    padding: 18px 28px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 20px 28px;
+  }
+}
+
+.faq__tabs-content {
+  display: flex;
+
+  @media (min-width: $desktop-width) {
+    flex-grow: 1;
+  }
+}
+
+.faq__tabs-content-item {
+  display: none;
+}
+
+.faq__tabs-content-item--active {
+  display: block;
+  width: 100%;
+}

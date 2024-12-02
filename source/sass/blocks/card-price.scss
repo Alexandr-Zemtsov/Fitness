@@ -1,0 +1,190 @@
+.card-price {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 35px;
+  max-width: 380px;
+  margin: 0 auto;
+
+  @media (min-width: $tablet-width) {
+    gap: 40px;
+  }
+
+  @media (min-width: $desktop-width) {
+    flex-direction: row;
+    max-width: 100%;
+  }
+}
+
+.card-price__item {
+  padding: 44px 23px 43px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background-color: #ffffff;
+  border: 7px solid transparent;
+  width: 100%;
+
+  &:hover {
+    border-image: $play-gradborder;
+  }
+
+  &:has(.card-price__button-link:focus-visible) {
+    border-image: $play-gradborder;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding: 58px 23px;
+  }
+}
+
+.card-price__title {
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 1;
+  margin-bottom: 18px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 24px;
+    margin-bottom: 22px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 26px;
+    margin-bottom: 17px;
+  }
+}
+
+.card-price__sub-title {
+  font-weight: 300;
+  line-height: 22px;
+  margin-bottom: 64px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 82px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 77px;
+  }
+}
+
+.card-price__block-price {
+  position: relative;
+  margin-bottom: 18px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 22px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 17px;
+  }
+}
+
+.card-price__price-text {
+  position: relative;
+  z-index: 2;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 1.5;
+  color: $color-price;
+  margin-bottom: 1px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 60px;
+    margin-bottom: 0;
+  }
+}
+
+.card-price__price-text::after {
+  content: "";
+  position: relative;
+  width: 24px;
+  height: 33px;
+  background: url("../../img/sprite/ruble.svg") no-repeat center;
+  background-size: cover;
+  display: inline-block;
+  margin-left: 10px;
+
+  @media (min-width: $tablet-width) {
+    width: 30px;
+    height: 42px;
+    margin-left: 14px;
+  }
+
+  @media (min-width: $desktop-width) {
+    height: 44px;
+    top: 1px;
+  }
+}
+
+.card-price-span {
+  position: absolute;
+  z-index: 1;
+  font-weight: 700;
+  font-size: 80px;
+  color: $price-shadow;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -48px;
+  line-height: 1.5;
+  opacity: 0.48;
+  width: 100%;
+
+  @media (min-width: $tablet-width) {
+    font-size: 100px;
+  }
+
+  @media (min-width: $desktop-width) {
+    top: -62px;
+  }
+}
+
+.card-price__button-link {
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 1;
+  text-transform: uppercase;
+  color: $color-text;
+  border: 2px solid #102654;
+  padding: 25px 42px;
+  width: 206px;
+  display: block;
+  text-align: center;
+  align-self: center;
+
+  &:disabled {
+    opacity: 0.3;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding: 25px 44px;
+    width: 250px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 230px;
+    padding: 25px 15px;
+  }
+}
+
+.card-price__item:hover .card-price__button-link {
+  background: linear-gradient(151deg, #ed0233 0%, #003eb7 100%);
+  color: $color-white;
+  border: 2px solid $color-white;
+}
+
+.card-price__button-link:focus-visible {
+  background: linear-gradient(151deg, rgba(237, 2, 51, 0.8) 0%, rgba(0, 62, 183, 0.8) 100%);
+  outline: none;
+  color: $color-white;
+}
+
+.card-price__button-link:active {
+  background: linear-gradient(151deg, #ed0233 0%, #003eb7 100%);
+  color: rgba($color-white, 0.7);
+  border: 2px solid $color-white;
+}

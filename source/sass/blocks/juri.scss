@@ -1,0 +1,119 @@
+.juri {
+  padding: 41px 0 40px;
+
+  @media (min-width: $tablet-width) {
+    padding: 30px 0 60px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 100px 0;
+  }
+}
+
+.juri__inner {
+  width: 100%;
+  position: relative;
+  display: flex;
+  height: 300px;
+}
+
+.juri__title {
+  margin-bottom: 19px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 46px;
+    font-size: 54px;
+  }
+
+  @media (min-width: $desktop-width) {
+    text-align: center;
+  }
+}
+
+.juri__slider-container {
+  position: relative;
+  overflow: hidden;
+  margin: 0 auto;
+  width: 260px;
+  z-index: 0;
+
+  @media (min-width: $tablet-width) {
+    width: 560px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 1160px;
+  }
+}
+
+.juri__button-slider {
+  display: none;
+  position: absolute;
+  border-radius: 50%;
+  background-color: transparent;
+  width: 56px;
+  height: 56px;
+  z-index: 1;
+  top: 50%;
+  border: none;
+  color: $color-text;
+
+  @media (min-width: $tablet-width) {
+    display: block;
+  }
+}
+
+.juri__button-slider::before {
+  content: "";
+  display: block;
+  height: 22px;
+  width: 22px;
+  position: absolute;
+  border-bottom: 1px solid currentColor;
+  border-left: 1px solid currentColor;
+  top: 48%;
+  left: 54%;
+  transform: translate(-39%, -66%);
+
+  @media (min-width: $desktop-width) {
+    height: 23px;
+    width: 23px;
+  }
+}
+
+.juri__button-slider--prev {
+  transform: translateY(-50%) rotate(45deg);
+  left: -13px;
+
+  @media (min-width: $desktop-width) {
+    left: -71px;
+    top: 49%;
+  }
+}
+
+.juri__button-slider--next {
+  transform: translateY(-50%) rotate(225deg);
+  right: -13px;
+
+  @media (min-width: $desktop-width) {
+    transform: translateY(-50%) rotate(225deg);
+    right: -73px;
+    top: 49%;
+  }
+}
+
+.juri__button-slider:hover {
+  border: 1px solid $color-text;
+}
+
+.juri__button-slider:focus-visible {
+  border: 1px solid $color-text;
+  outline: none;
+  background-color: #e8e8e8;
+}
+
+.juri__button-slider:active {
+  border: 1px solid $color-text;
+  background-color: $color-text;
+  color: $color-white;
+}

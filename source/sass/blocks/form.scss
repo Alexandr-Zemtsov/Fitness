@@ -1,0 +1,142 @@
+.form {
+  width: 290px;
+  color: $color-white;
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+
+  @media (min-width: $tablet-width) {
+    width: 440px;
+    margin: 0 auto;
+    gap: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0;
+    width: 477px;
+  }
+}
+
+.form__title {
+  position: relative;
+  top: 1px;
+  font-family: $second-family;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 1;
+  text-align: left;
+
+  @media (min-width: $tablet-width) {
+    font-size: 54px;
+    text-align: center;
+    top: 0;
+    margin-bottom: 36px;
+  }
+
+  @media (min-width: $desktop-width) {
+    text-align: left;
+  }
+}
+
+.form__list-input {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+    gap: 30px;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 35px;
+  }
+}
+
+.form__item-input {
+  position: relative;
+}
+
+.form__input {
+  width: 100%;
+  background-color: transparent;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 22px;
+  padding-bottom: 3px;
+  border: 1px solid transparent;
+  border-bottom: 1px solid $divider;
+  color: $color-white;
+  outline: none;
+
+  @media (min-width: $tablet-width) {
+    font-weight: 400;
+    margin-left: -1px;
+  }
+}
+
+.form__error-text {
+  position: absolute;
+  left: 0;
+  top: 100%;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+  color: $color-error;
+  display: block;
+}
+
+.form__input::placeholder {
+  color: rgba($color-white, 0.4);
+
+  @media (min-width: $tablet-width) {
+    font-weight: 300;
+  }
+}
+
+.form__button-submit {
+  border: 2px solid $color-white;
+  padding: 22px 106px;
+  height: 60px;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 1;
+  text-transform: uppercase;
+  color: $color-white;
+  background-color: transparent;
+
+  @media (min-width: $tablet-width) {
+    padding: 26px 56px;
+    height: 66px;
+    text-align: center;
+  }
+}
+
+.form__input:hover {
+  border-bottom: 1px solid $color-white;
+}
+
+.form__input:focus-visible {
+  border: 1px solid $color-white;
+}
+
+.form__input:disabled {
+  opacity: 0.4;
+  border-bottom: 1px solid $color-white;
+}
+
+.form__input--error {
+  border-bottom: 1px solid $color-error;
+}
+
+.form__button-submit:hover,
+.form__button-submit:focus-visible {
+  color: $color-text;
+  background-color: $color-white;
+}
+
+.form__button-submit:active {
+  opacity: 0.6;
+}
+
+.form__button-submit:disabled {
+  opacity: 0.4;
+}

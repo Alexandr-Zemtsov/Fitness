@@ -1,0 +1,78 @@
+.social__list {
+  display: inline-flex;
+  gap: 20px;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    width: fit-content;
+    gap: 15px;
+  }
+
+  @media (min-width: $desktop-width) {
+    gap: 10px;
+  }
+}
+
+.social__item {
+  background-color: $color-white;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+}
+
+.social__link {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: $color-dark;
+  mask-position: center;
+  mask-repeat: no-repeat;
+  transition: all 0.1s linear;
+  mask-size: 40%;
+}
+
+.social__link--vk {
+  mask-image: url("../../img/sprite/vk.svg");
+  mask-size: 12px 7px;
+  mask-position: 6px 10px;
+}
+
+.social__link--ok {
+  mask-image: url("../../img/sprite/odnoklassniki.svg");
+  mask-size: 9.4px 16.5px;
+  mask-position: 8.2px 4px;
+}
+
+.social__link--reddit {
+  mask-image: url("../../img/sprite/reddit.svg");
+  mask-size: 14.5px 14.5px;
+  mask-position: 5.2px 5px;
+}
+
+.social__link:hover,
+.social__link:focus-visible,
+.social__link:active {
+  background-color: $color-white;
+  outline: 0;
+}
+
+.social__link:not([href]) {
+  background-color: $color-dark;
+  cursor: not-allowed;
+}
+
+.social__item:has(.social__link:hover) {
+  background-color: $divider;
+}
+
+.social__item:has(.social__link:focus-visible) {
+  background-color: $color-text;
+}
+
+.social__item:has(.social__link:active) {
+  background-color: $color-price;
+}
+
+.social__item:has(.social__link:not([href])) {
+  background-color: #d8dadf;
+}
