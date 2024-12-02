@@ -65,7 +65,7 @@ export default {
   build: {
     outDir: '../dist',
   },
-  base: 'https://alexandr-zemtsov.github.io/Fitness/',
+  base: './',
   server: {
     port: 3000,
   }
