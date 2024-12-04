@@ -61,7 +61,7 @@ export default {
     devSourcemap: true
   },
   publicDir: 'public',
-  root: './source',
+  root: '/Fitness',
   build: {
     outDir: '../dist',
   },
